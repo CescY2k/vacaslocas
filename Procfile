@@ -1,1 +1,1 @@
-web: gunicorn --bind 0.0.0.0:$PORT muuunt:app
+web: gunicorn --bind 0.0.0.0:$PORT deployd:app
