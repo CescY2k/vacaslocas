@@ -1,1 +1,1 @@
-web: gunicorn --bind 0.0.0.0:$PORT deployd:vacatuneada
+web: gunicorn deployd.wsgi
