@@ -1,1 +1,1 @@
-web: gunicorn --bind 0.0.0.0:$PORT deployd:app
+web: gunicorn --bind 0.0.0.0:$PORT deployd:vacatuneada
