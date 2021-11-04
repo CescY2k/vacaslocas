@@ -12,13 +12,17 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import django_heroku
+import environ
 
+root = environ.Path(start=_file_) - 2
+env = environ.Env()
+env.read_env('.env')
 
 # Activate Django-Heroku.
 django_heroku.settings(locals())
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-#BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(_file_)))
 
 
 # Quick-start development settings - unsuitable for production
