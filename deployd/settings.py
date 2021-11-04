@@ -12,11 +12,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import django_heroku
-import environ
 
-root = environ.Path(start=_file_) - 2
-env = environ.Env()
-env.read_env('.env')
 
 # Activate Django-Heroku.
 django_heroku.settings(locals())
