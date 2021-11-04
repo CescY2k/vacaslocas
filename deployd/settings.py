@@ -14,7 +14,7 @@ from pathlib import Path
 import django_heroku
 import environ
 
-root = environ.Path(start=_file_) - 2
+root = environ.Path(start=__file__) - 2
 env = environ.Env()
 env.read_env('.env')
 
@@ -22,7 +22,7 @@ env.read_env('.env')
 django_heroku.settings(locals())
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(_file_)))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 # Quick-start development settings - unsuitable for production
